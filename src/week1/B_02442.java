@@ -1,0 +1,27 @@
+package week1;
+
+import java.util.Scanner;
+
+public class B_02442 {
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		int T = scan.nextInt();
+		
+		String res = "";
+		String stars = "";
+		for(int i=1; i<=T; i++) {
+			for(int j=0; j<T-i; j++) {
+				stars += " ";
+			}
+			for(int j=0; j<i+i-1; j++) {
+				stars += "*";
+			}
+			res += stars + "\n";
+			stars = "";
+		}
+		
+		System.out.println(res);
+	}
+}
